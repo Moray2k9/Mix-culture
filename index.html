@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix culture</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Mix culture</span>
+
+        </div>
+        <div id="about">
+            <a href="#" title="возможности" onclick="slowScroll('#main')">Возможности</a>
+            <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+            <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+            <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+        </div>
+    </header>
+
+        <div id="top">
+            <h1>S t o p</h1>
+            <h3>Mix culture</h3>
+        </div>
+
+        <div id="main">
+            <div class="intro">
+                <h2>Большой выбор ножей!</h2>
+                <span><i>Ножик маленький или есть сейчас в продаже побольше ножи есть.</i></span>
+            </div>
+            <div class="text">
+                <span>Я че хочу сказать я хочу сказать одну вещь очень важную щас начинается в людях что идет многие люди щас берут вместо того что бы резать например морковь картофель или сейчас продаются баклажаны ножами они скупают начинают скупать миксеры идет это потому что очень много увлечений идет на счет миксеров.</span>
+            </div>
+        </div>
+
+            <div id="overview">
+                <h2>Преимущества</h2>
+                <h3>С ножами все проще</h3>
+
+                <div class="img">
+                    <img class="img2" src="https://s.mediasole.ru/cache/content/data/images/1065/1065497/original.jpg" alt="">
+                    <span></span>
+                </div>
+                <div class="img">
+                    <img class="img2" src="https://st2.depositphotos.com/1008450/6289/i/600/depositphotos_62893105-stock-photo-kitchen.jpg" alt="">
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="contacts">
+                <center><h5>Обратная связь</h5></center>
+                <form id="form_input" >
+                    <label for="name">Имя <span>*</span></label> <br>
+                    <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+                    <label for="email">Почта <span>*</span></label> <br>
+                    <input type="email" placeholder="Введите почту" name="email" id="email"><br>
+                    <label for="message">Сообщение <span>*</span></label> <br>
+                    <textarea name="message" id="message" placeholder="Введите ваше сообщение"></textarea><br>
+                    <div id="mess_send" class="btn">Отправить</div>
+                </form>
+            </div>
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+             }, 500)
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+             else
+                $("header").attr("class", "fixed");
+        });
+
+    </script>
+</body>
+</html>
